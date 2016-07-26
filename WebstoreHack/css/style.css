@@ -1,0 +1,57 @@
+
+
+
+html {
+  background-color: gray;
+}
+
+header {
+  border-bottom: none
+}
+
+body {
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 0 20px 20px 20px;
+
+}
+
+p, li {
+  font-size: 16px;  
+  line-height: 2;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+h3 {
+  font-size-adjust: auto;
+  padding: 20px 0;  
+  font: 20px "HelveticaNeue-Light", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  text-decoration-color: rgba(25, 75, 126, 0.59);
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+  
+
+
+p, li {
+  font-size: 12px;  
+  line-height: 1;
+  letter-spacing: 1px;
+   
+}
+
+
+.col-4 {
+    background-color: beige
+}
