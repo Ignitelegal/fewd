@@ -51,6 +51,10 @@ p, li {
    
 }
 
+.pic { 
+  height: 80px;   
+}
+
 
 .col-4 {
     background-color: beige
