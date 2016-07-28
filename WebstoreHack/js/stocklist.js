@@ -1,6 +1,6 @@
 
 var content1 = {
-	id : "book_1", 
+	id : "book1", 
 	title : "Code Red",
 	category : "Action",
 	price : 15.95,
@@ -9,7 +9,7 @@ var content1 = {
 }
 
 var content2 = {
-	id : "book_2",
+	id : "book2",
 	title : "Cracking the Code",
 	category : "Mystery",
 	price : 25.95,
@@ -18,7 +18,7 @@ var content2 = {
 }
 
 var content3 = {
-	id : "book_3",
+	id : "book3",
 	title : "How to Code",
 	category : "DIY",
 	price : 35.95,
@@ -28,7 +28,7 @@ var content3 = {
 }
 
 var content4 = {
-	id : "album_1",
+	id : "album1",
 	title : "Going back to Miami",
 	category : "Country",
 	price : 4.95,
@@ -37,7 +37,7 @@ var content4 = {
 }
 
 var content5 = {
-	id : "album_2",
+	id : "album2",
 	title : "The Currie Brothers",
 	category : "Tragic",
 	price : 5.95,
@@ -53,40 +53,49 @@ var albums = [
 	Object(content4), Object(content5)
 ]
 
-//^ DO I ACTUALLY NEED THIS? ^ //
+var products = [
+	Object(books), Object(albums)
+]
 
-var setSize = function (pic){
-	pic.html('<style="height:80px">');
-}
 
-var t = $('<li>');
-t.html('Title :'+ " " + content1['title']);
+var addContent = function(){
+	for (i=0; i<products.length; i++){
+		console.log(products[i]);
+		
+		$("<div id="+ products[i] + "</div>").append();			
+			var t = $('<li>');
+			t.html('Title :'+ " " + products[i]['title']);
+			$('"#" + products[i]["id"]').append(t);
 
-var c = $('<li>');
-c.html('Category :'+ " " + content1['category']);
+			var c = $('<li>');
+			c.html('Category :'+ " " + products[i]['category']);
+			$('"#" + products[i]["id"]').append(c);
 
-var p = $('<li>');
-p.html('Price :'+ " " + "$" + content1['price']);
+			var p = $('<li>');
+			p.html('Price :  '+ " " + "$" + products[i]['price']);
+			$('"#" + products[i]["id"]').append(p);
 
-var h = $('<li>');
-h.html('Highlights :'+ " " + content1['highlights']); 
+			var h = $('<li>');
+			h.html('Highlights :'+ " " + products[i]['highlights']); 
+			$('"#" + products[i]["id"]').append(h);
 
-var l = $('<div>')
-l.html("<img class='pic' src =" + content1['picture_url'] + ">"); //id=pic
+			var l = $('<div>')
+			l.html("<img class='pic' src =" + products[i]['picture_url'] + ">");
+			$('"#" + products[i]["id"]').append(l);
+	
+		};
+	};
 
-var addContent = function() {
-	$("#book1").append(t);
-	$("#book1").append(c);
-	$("#book1").append(p);
-	$("#book1").append(h);
-	$("#book1").append(l);
-}
+window.onload = addContent()
+
+
+ 
 
 	
 			//HOW DO I INSERT THE ACUTAL KEY VALUES FOR EACH OBJECT???//
 
 
-window.onload = addContent;
+
 
 
 /* 
