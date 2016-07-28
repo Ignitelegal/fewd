@@ -5,7 +5,7 @@
 
 var content1 = {
 	id : "book_1", 
-	name : "Code Red",
+	title : "Code Red",
 	category : "Action",
 	price : 15.95,
 	highlights : ["Action-hacked", " cybercrime-fighting", " ginger ninga"],
@@ -14,7 +14,7 @@ var content1 = {
 
 var content2 = {
 	id : "book_2",
-	name : "Cracking the Code",
+	title : "Cracking the Code",
 	category : "Mystery",
 	price : 25.95,
 	highlights : ["Thought code was whack?", " Methodone for coders"],
@@ -23,7 +23,7 @@ var content2 = {
 
 var content3 = {
 	id : "book_3",
-	name : "How to Code",
+	title : "How to Code",
 	category : "DIY",
 	price : 35.95,
 	highlights : ["Easy", " step-by-step guide", " with lots of useless drawings"],
@@ -33,7 +33,7 @@ var content3 = {
 
 var content4 = {
 	id : "album_1",
-	name : "Going back to Miami",
+	title : "Going back to Miami",
 	category : "Country",
 	price : 4.95,
 	highlights : ["If you think Trump is a dick...", " meet his Hair-god!", " - Douchebag Heaven"],
@@ -42,7 +42,7 @@ var content4 = {
 
 var content5 = {
 	id : "album_2",
-	name : "The Currie Brothers",
+	title : "The Currie Brothers",
 	category : "Tragic",
 	price : 5.95,
 	highlights : ["Accordian-plaing", "Rangas", "- Hot Stuff!"],
@@ -52,20 +52,16 @@ var content5 = {
 
 
 var book_1 = Object(content1);
-	console.log(book_1);
 
 var book_2 = Object(content2);
-	console.log(book_2);
 
 var book_3= Object(content3);
-	console.log(book_3);
 
 var album_1= Object(content4);
-	console.log(album_1);
 
 var album_2= Object(content5);
 
-	console.log(album_2);
+//^ DO I ACTUALLY NEED THIS? ^ //
 
 
 
@@ -78,7 +74,7 @@ p.html('Price :'+ " " + "$" + book_1.price);
 var h = $('<li>');
 h.html('Highlights :'+ " " + book_1.highlights); 
 
-var addContent = function(book_1) {
+var addContent = function() {
 	$("#book1").append(t);
 	$("#book1").append(c);
 	$("#book1").append(p);
