@@ -2,17 +2,18 @@
 
 
 html {
-  background-color: gray;
+  background-color: #ffffff;
 }
 
 header {
-  border-bottom: none;
-  position: relative;
+  background-color: olive;
+  background-position: fixed;
 }
 
 body {
-  margin: 0 auto;
+
   background-color: #ffffff;
+  margin: 0 auto;
   padding: 0 10px 10px 10px;
 
 }
@@ -42,7 +43,9 @@ img {
   margin: 0 auto;
 }
 
-
+.stock {
+  background-position: relative;
+}
 
 .pic { 
   height: 100px;
@@ -50,25 +53,22 @@ img {
   margin-bottom: 10px;   
 }
 
-.crop{
-  margin:.5em 10px .5em 0;
-  overflow:hidden;
-  border:1px;
-}
-
-
-div #bookshelf {
-  background-image: url("http://hyhoi.com/wp-content/uploads/2016/05/f-steep-street-coffee-house-creative-quarter-folkestone-kent-cafe-cake-instagram-dizzyc.jpg");
-  background-position: fixed;
-}
-
-div #musicshelf {
-  background-image: url("http://blogs-images.forbes.com/hughmcintyre/files/2015/02/Record-Store.jpg");
-  margin: -175px 0 0 0;
-  overflow:hidden;
+.crop {
   padding: 100px 0 0 0;
-  background-position: fixed;
-  
+  margin: -175px 0 0 0;
+  overflow: hidden;
+}
+
+
+#bookshelf {
+   background-image: url("http://hyhoi.com/wp-content/uploads/2016/05/f-steep-street-coffee-house-creative-quarter-folkestone-kent-cafe-cake-instagram-dizzyc.jpg");
+   display: none;
+   margin-top: -20px;
+}
+
+#musicshelf {
+  background-image: url("http://blogs-images.forbes.com/hughmcintyre/files/2015/02/Record-Store.jpg");
+  display: none;
 }
 
 .col-4 {
@@ -76,4 +76,5 @@ div #musicshelf {
     opacity: 0.85;
     margin: 0 10px 20px 10px;
     padding: 20px 20px 20px 20px;
+    font-weight: bold;
 }

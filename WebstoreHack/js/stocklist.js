@@ -74,85 +74,85 @@ function sortProduct(){
 		};
 };
 
-
+//hide product shelves on load and execute sort function to create obj for Books and Albums//
 $(window).load(function(){
-	$('#bookshelf').css({'display':'none'});
-	$('#musicshelf').css({'display':'none'});
+	$('#bookshelf').css({display:'none'});
+	$('#musicshelf').css({display:'none'});
 	sortProduct();
-	showBooks();
-	showAlbums();//
 	});	
 
 
-var showAlbums = function(){
-	$('#musicshelf').css({'display':'block'});
-	$('#bookshelf').css({'display':'hidden'});
-	for (var i=0; i<albums.length; i++){
-		var product = albums[i];
-  		var $newProduct = $('<div>').addClass('col-4').attr('id', product.id);
-  		$('div #musicshelf').append($newProduct);
-
- 		var l = $('<div>');
-			l.html("<img class='pic' src =" + product.picture_url + ">");
-				$("#" + product.id).append(l);
-
- 		var t = $('<li>');
-			t.html('Title :'+ " " + product.title);
-				$("#" + product.id).append(t);
-
-		var c = $('<li>');
-			c.html('Category :'+ " " + product.category);
-				$("#" + product.id).append(c);
-
-		var p = $('<li>');
-			p.html('Price :  '+ " " + "$" + product.price);
-				$("#" + product.id).append(p);
-
-		var h = $('<li>');
-			h.html('Highlights :'+ " " + product.highlights); 
-				$("#" + product.id).append(h);
-
-
-		};
-	};
-
-
+//create function to loop through Book objects, hide musicshelf and show bookshelf after appending each Book//
 var showBooks = function(){
-	$('#bookshelf').css({'display':'block'});
-	$('#musicshelf').css({'display':'hidden'});
+	$('#musicshelf').css({display:'none'});
+	$('div #bookshelf').children("div").remove();
+	$('#bookshelf').css({display:'block'});
+	
 	for (var i=0; i<books.length; i++){
 		var product = books[i];
+  		
   		var $newProduct = $('<div>').addClass('col-4').attr('id', product.id);
   		$('div #bookshelf').append($newProduct);
 		
   		var l = $('<div>');
-			l.html("<img class='pic' src =" + product.picture_url + ">");
-				$("#" + product.id).append(l);
+		l.html("<img class='pic' src =" + product.picture_url + ">");
+		$("#" + product.id).append(l);
 
 		var t = $('<li>');
-			t.html('Title :'+ " " + product.title);
-				$("#" + product.id).append(t);
+		t.html('Title :'+ " " + product.title);
+		$("#" + product.id).append(t);
 
 		var c = $('<li>');
-			c.html('Category :'+ " " + product.category);
-				$("#" + product.id).append(c);
+		c.html('Category :'+ " " + product.category);
+		$("#" + product.id).append(c);
 
 		var p = $('<li>');
-			p.html('Price :  '+ " " + "$" + product.price);
-				$("#" + product.id).append(p);
+		p.html('Price :  '+ " " + "$" + product.price);
+		$("#" + product.id).append(p);
 	
 		var h = $('<li>');
-			h.html('Highlights :'+ " " + product.highlights); 
-				$("#" + product.id).append(h);
-	
+		h.html('Summary :'+ " " + product.highlights); 
+		$("#" + product.id).append(h);
 		};
 	};
 
+//create function to loop through Album objects, hide bookshelf and show musicshelf after appending each Album//
+var showAlbums = function(){
+	$('#bookshelf').css({display:'none'});
+	$('div #musicshelf').children("div").remove();
+	$('#musicshelf').css({display:'block'});
+	
+	for (var i=0; i<albums.length; i++){	
+		var product = albums[i];
+  		
+  		var $newProduct = $('<div>').addClass('col-4').attr('id', product.id);
+  		$('div #musicshelf').append($newProduct);
 
+ 		var l = $('<div>');
+		l.html("<img class='pic' src =" + product.picture_url + ">");
+		$("#" + product.id).append(l);
 
+ 		var t = $('<li>');
+		t.html('Title :'+ " " + product.title);
+		$("#" + product.id).append(t);
+
+		var c = $('<li>');
+		c.html('Category :'+ " " + product.category);
+		$("#" + product.id).append(c);
+
+		var p = $('<li>');
+		p.html('Price :  '+ " " + "$" + product.price);
+		$("#" + product.id).append(p);
+
+		var h = $('<li>');
+		h.html('Highlights :'+ " " + product.highlights); 
+		$("#" + product.id).append(h);
+		};
+	};
 /*
 
-//COULD PROBABLY USE A SINGLE ADDCONTENT FUNCTION FOR EITHER PRODUCT TYPE
+//CONSIDER MAKING THESE FUNCTIONS MORE EFFICIENT BY USING A SINGLE 'ADDCONTENT' FUNCTION FOR EACH PRODUCT TYPE
+	- would need to make addContent function an object in which var product is defined by reference to nav selected//
 
 	  var addContent = function(obj){
 			$("<div id=" + obj.id + "</div>").append();			
@@ -180,32 +180,23 @@ var showBooks = function(){
 		$(product).addContent();
 */		
 
+$(document).ready(function(){
 
-//CANT MAKE THE NAV CLICK TO EXECUTE FUNCTION//
+	$('.nav #booklist').click(function(){
+		showBooks();
+		});
 
-$('#booklist').click(function(){ 
-	console.log("working");
-	//$('.nav li').attr('class','');
-  	//$('.nav li #booklist').addClass('active');
-  //	$('#musicshelf').css({'display':'none'});
-  //	$('#bookshelf').css({'display':'block'});
- });
+	$('.nav #albumlist').click(function(){
+		showAlbums();
+		});
+	
+	$('.nav #home').click(function(){
+ 	 	$('.nav li').attr('class','');
+ 		$('.nav #home').addClass('active');
+		$('#musicshelf').hide();
+		$('#bookshelf').hide();
+		});
+	});
 
-
-$('#albumlist').click(function(){
-  $('.nav li').attr('class','');
-  $('.nav li #albumlist').addClass('active');
-  $('div #musicshelf').show();
-  $('div #bookshelf').hide();
-})
-
-
-/*
-$('.nav #all').click(function(){
-  $('.nav li').attr('class','');
-  $('#all').addClass('active');
-  $('.product').show();
-})
-*/
 
 
