@@ -1,9 +1,6 @@
 
-
-
 html {
    background-color: olive;
-
 }
 
 header {
@@ -22,13 +19,11 @@ body {
   padding: 0 auto;
 }
 
-
 p, li {
   font-size: 16px;  
   line-height: 1.5;
   letter-spacing: 1px;
   margin-bottom: 15px;
-
 }
 
 h1 {
@@ -47,7 +42,6 @@ img {
   display: block;
   margin: 0 auto;
 }
-
 
 .pic { 
   height: 100px;
@@ -89,4 +83,3 @@ img {
     padding: 20px 20px 20px 20px;
     font-color: black;
 }
-
