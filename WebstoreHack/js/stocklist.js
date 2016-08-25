@@ -15,7 +15,7 @@ var content2 = {
 	title : "Cracking the Code",
 	category : "Mystery",
 	price : 25.95,
-	highlights : ["Thought code was whack?", " Youll need rehab after this one!"],
+	highlights : ["Thought code was whack?", " You'll need rehab after this one!"],
 	picture_url : "http://thetinylife.com/wp-content/uploads/2013/01/book-cover.jpg" //style="height:80px"
 }
 
@@ -25,7 +25,7 @@ var content3 = {
 	title : "How to Code",
 	category : "DIY",
 	price : 35.95,
-	highlights : ["Easy", " step-by-step guide", " with lots of useless drawings"],
+	highlights : ["simple ", " step-by-step guide", " with lots of useless drawings"],
 	picture_url : "http://www.sean.co.uk/shared/gfx/bookcovers/superskills250x333.jpg" //style="height:80px"
 
 }
@@ -36,7 +36,7 @@ var content4 = {
 	title : "Going back to Miami",
 	category : "Country",
 	price : 4.95,
-	highlights : ["Think Trump is a dick?", " ...meet his Hair-god!", " - Douchebag Heaven"],
+	highlights : ["Reckon Trump was a dick?", " ...meet his Hair-god!", " - Douchebag Heaven"],
 	picture_url : "https://s-media-cache-ak0.pinimg.com/236x/e8/8a/bb/e88abbb79808fc2b50a25ae48cc41542.jpg" //style="height:80px">
 }
 
@@ -46,7 +46,7 @@ var content5 = {
 	title : "The Currie Brothers",
 	category : "Tragic",
 	price : 5.95,
-	highlights : ["Accordian-playing", " Ranga twins", " Dont take our word for it, these boys are - Hot Stuff!"],
+	highlights : ["Accordian-playing", " Ranga twins", "  - Hot Stuff!"],
 	picture_url : "https://s-media-cache-ak0.pinimg.com/564x/63/e6/65/63e665a454bd6c4fa2ab86a114966ac8.jpg" //style="height:80px">
 }
 
@@ -76,15 +76,15 @@ function sortProduct(){
 
 //hide product shelves on load and execute sort function to create obj for Books and Albums//
 $(window).load(function(){
-	$('#bookshelf').css({display:'none'});
-	$('#musicshelf').css({display:'none'});
+	$('#bookshelf').hide();
+	$('#musicshelf').hide();
 	sortProduct();
 	});	
 
 
 //create function to loop through Book objects, hide musicshelf and show bookshelf after appending each Book//
 var showBooks = function(){
-	$('#musicshelf').css({display:'none'});
+	$('#musicshelf').hide();
 	$('div #bookshelf').children("div").remove();
 	$('#bookshelf').css({display:'block'});
 	
@@ -111,14 +111,14 @@ var showBooks = function(){
 		$("#" + product.id).append(p);
 	
 		var h = $('<li>');
-		h.html('Summary :'+ " " + product.highlights); 
+		h.html('Our thoughts :'+ " " + product.highlights); 
 		$("#" + product.id).append(h);
 		};
 	};
 
 //create function to loop through Album objects, hide bookshelf and show musicshelf after appending each Album//
 var showAlbums = function(){
-	$('#bookshelf').css({display:'none'});
+	$('#bookshelf').hide();
 	$('div #musicshelf').children("div").remove();
 	$('#musicshelf').css({display:'block'});
 	
@@ -145,7 +145,7 @@ var showAlbums = function(){
 		$("#" + product.id).append(p);
 
 		var h = $('<li>');
-		h.html('Highlights :'+ " " + product.highlights); 
+		h.html('Our thoughts :'+ " " + product.highlights); 
 		$("#" + product.id).append(h);
 		};
 	};
@@ -197,6 +197,3 @@ $(document).ready(function(){
 		$('#bookshelf').hide();
 		});
 	});
-
-
-
