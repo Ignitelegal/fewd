@@ -179,17 +179,14 @@ var showAlbums = function(){
 			};
 		$(product).addContent();
 */		
-
 $(document).ready(function(){
-
+	
 	$('.nav #booklist').click(function(){
 		showBooks();
 		});
-
 	$('.nav #albumlist').click(function(){
 		showAlbums();
 		});
-	
 	$('.nav #home').click(function(){
  	 	$('.nav li').attr('class','');
  		$('.nav #home').addClass('active');
