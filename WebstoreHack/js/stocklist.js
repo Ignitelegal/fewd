@@ -6,7 +6,7 @@ var content1 = {
 	category : "Action",
 	price : 15.95,
 	highlights : ["Action-hacked", " cybercrime-fighting", " ginger ninga"],
-	picture_url : "http://www.loopdesigngroup.com/wordpress/wp-content/uploads/Print_CodeRed.jpg" //style="height:80px"//
+	picture_url : "http://www.loopdesigngroup.com/wordpress/wp-content/uploads/Print_CodeRed.jpg" 
 }
 
 var content2 = {
@@ -16,7 +16,7 @@ var content2 = {
 	category : "Mystery",
 	price : 25.95,
 	highlights : ["Thought code was whack?", " You'll need rehab after this one!"],
-	picture_url : "http://thetinylife.com/wp-content/uploads/2013/01/book-cover.jpg" //style="height:80px"
+	picture_url : "http://thetinylife.com/wp-content/uploads/2013/01/book-cover.jpg" 
 }
 
 var content3 = {
@@ -26,7 +26,7 @@ var content3 = {
 	category : "DIY",
 	price : 35.95,
 	highlights : ["simple ", " step-by-step guide", " with lots of useless drawings"],
-	picture_url : "http://www.sean.co.uk/shared/gfx/bookcovers/superskills250x333.jpg" //style="height:80px"
+	picture_url : "http://www.sean.co.uk/shared/gfx/bookcovers/superskills250x333.jpg" 
 
 }
 
@@ -36,8 +36,8 @@ var content4 = {
 	title : "Going back to Miami",
 	category : "Country",
 	price : 4.95,
-	highlights : ["Reckon Trump was a dick?", " ...meet his Hair-god!", " - Douchebag Heaven"],
-	picture_url : "https://s-media-cache-ak0.pinimg.com/236x/e8/8a/bb/e88abbb79808fc2b50a25ae48cc41542.jpg" //style="height:80px">
+	highlights : ["And you thought Trump was a dick?", " ...meet his Hair-god!"],
+	picture_url : "https://s-media-cache-ak0.pinimg.com/236x/e8/8a/bb/e88abbb79808fc2b50a25ae48cc41542.jpg"
 }
 
 var content5 = {
@@ -47,7 +47,7 @@ var content5 = {
 	category : "Tragic",
 	price : 5.95,
 	highlights : ["Accordian-playing", " Ranga twins", "  - Hot Stuff!"],
-	picture_url : "https://s-media-cache-ak0.pinimg.com/564x/63/e6/65/63e665a454bd6c4fa2ab86a114966ac8.jpg" //style="height:80px">
+	picture_url : "https://s-media-cache-ak0.pinimg.com/564x/63/e6/65/63e665a454bd6c4fa2ab86a114966ac8.jpg"
 }
 
 //create array containing all products - use for stock availability//

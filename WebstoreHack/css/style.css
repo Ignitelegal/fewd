@@ -7,14 +7,14 @@ header {
   background-position: absolute;
   width: 100%;
   height: 100%;
-  margin: 0 auto;
-  background: url('http://data.whicdn.com/images/136035616/large.jpg');
-  background-size: cover;
+  margin: 0 0 -20px 0;
   background-image: linear-gradient(to bottom right,olive, white);
   opacity: .9; 
 }
 
 body {
+  background: url('http://data.whicdn.com/images/136035616/large.jpg');
+  background-size: cover;
   margin: 0 auto;
   padding: 0 auto;
 }
@@ -50,7 +50,7 @@ img {
 }
 
 .crop {
-  padding: 200 auto;
+  padding: 175 auto;
   margin: -175px 0 0 0;
   overflow: hidden;
 }
@@ -58,6 +58,7 @@ img {
 #motif {
   z-index: 99999;
   margin-left: 20px;
+  margin-bottom: -40px;
   border: 5px solid;
   border-color: olive;
 }
